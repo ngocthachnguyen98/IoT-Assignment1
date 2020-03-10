@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7d25408f-f584-4f4c-aa59-d6b01c9046ba</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Assignment1.py</StartupFile>
+    <StartupFile>electronicDie.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assignment1.py" />
+    <Compile Include="animatedEmoji.py" />
+    <Compile Include="electronicDie.py" />
+    <Compile Include="game.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="monitorAndDisplay.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
