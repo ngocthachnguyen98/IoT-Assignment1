@@ -20,7 +20,7 @@ class Die:
 			y = acceleration['y']
 
 			overallAccel = x + y
-			threshold = 0.5
+			threshold = 1
 			if overallAccel > threshold:
 				return
 
