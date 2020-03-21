@@ -1,1 +1,50 @@
+from sense_hat import SenseHat
+from time import sleep
 
+sense = SenseHat()
+
+red = (255, 0, 0)
+green = (0, 255, 0)
+blue = (0, 0, 255)
+black = (0, 0, 0)
+
+smiley_face = [
+    black, black, black, black, black, black, black, black,
+    black, black, red, black, black, red, black, black,
+    black, black, red, black, black, red, black, black,
+    black, black, black, black, black, black, black, black,
+    black, red, black, black, black, black, red, black,
+    black, black, red, black, black, red, black, black,
+    black, black, black, red, red, black, black, black,
+    black, black, black, black, black, black, black, black
+]
+
+sad_face = [
+    black, black, black, black, black, black, black, black,
+    black, black, green, black, black, green, black, black,
+    black, black, green, black, black, green, black, black,
+    black, black, black, black, black, black, black, black,
+    black, black, black, green, green, black, black, black,
+    black, black, green, black, black, green, black, black,
+    black, green, black, black, black, black, green, black,
+    black, black, black, black, black, black, black, black
+]
+
+winkey_face = [
+    black, black, black, black, black, black, black, black,
+    black, black, blue, black, black, black, blue, black,
+    black, black, blue, black, black, blue, blue, black,
+    black, black, black, black, black, black, black, black,
+    black, blue, black, black, black, black, blue, black,
+    black, black, blue, black, black, blue, black, black,
+    black, black, black, blue, blue, black, black, black,
+    black, black, black, black, black, black, black, black
+]
+
+while True:
+    sense.set_pixels(smiley_face)
+    sleep(3)
+    sense.set_pixels(sad_face)
+    sleep(3)
+    sense.set_pixels(winkey_face)
+    sleep(3)
