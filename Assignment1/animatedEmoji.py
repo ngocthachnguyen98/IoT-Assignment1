@@ -38,7 +38,7 @@ sad_face = [
 winky_face = [
     black, black, black, black, black, black, black, black,
     black, black, blue, black, black, black, blue, black,
-    black, black, blue, black, black, blue, blue, black,
+    black, black, blue, black, black, blue, blue, blue,
     black, black, black, black, black, black, black, black,
     black, blue, black, black, black, black, blue, black,
     black, black, blue, black, black, blue, black, black,
