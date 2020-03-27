@@ -1,6 +1,7 @@
+import time
+from datetime import datetime
 import electronicDie
 from electronicDie import Die
-import time
 
 class Game:
 
@@ -32,7 +33,7 @@ class Game:
 		self.showScore()
 		print()
 		time.sleep(1)
-		if player.points >= 30:
+		if player.points > 30:
 			return player
 
 
@@ -43,6 +44,9 @@ class Game:
 
 	def announceWinner(self, player):
 		print("%s Won!" % (player.name))
+		f = open("scores.txt", "a")
+		f.write("%s - %s - %d points\n" % (datetime.now(), player.name, player.points))
+		f.close()
 
 
 class Player:
