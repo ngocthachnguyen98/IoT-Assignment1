@@ -1,5 +1,4 @@
 from sense_hat import SenseHat
-import random
 from random import seed
 from random import random
 from datetime import datetime

@@ -2,6 +2,7 @@ import time
 from datetime import datetime
 import electronicDie
 from electronicDie import Die
+import csv
 
 class Game:
 
@@ -20,7 +21,6 @@ class Game:
 				self.announceWinner(winningPlayer)
 				break
 			currentPlayerIndex = 1-currentPlayerIndex #convert 0 to 1 or vice versa
-
 
 
 	def playTurn(self, player):
@@ -44,16 +44,22 @@ class Game:
 
 	def announceWinner(self, player):
 		print("%s Won!" % (player.name))
-		f = open("scores.txt", "a")
-		f.write("%s - %s - %d points\n" % (datetime.now(), player.name, player.points))
-		f.close()
+
+		# Write record to a .csv file
+		try:
+			with open("winner.csv", "a") as file:
+				writer = csv.writer(file, delimiter = "\t")
+				writer.writerow([datetime.now(), player.name, player.points])
+				file.close()
+		except FileNotFoundError: # Cacth exception if file is not found
+			print("ERROR: Non-existing config filename")
 
 
 class Player:
 	def __init__(self, name):
 		self.name = name
 		self.points = 0
-		pass
+
 
 	def addPoints(self, points):
 		print("%s scored %d points!"% (self.name, points))
