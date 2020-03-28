@@ -26,6 +26,8 @@ try:
         comfortable_max = data["comfortable_max"]
         hot_min = data["hot_min"]
 
+        read_file.close()
+
         # Display message on Sense Hat
         while True:
             if temp <= cold_max: background = blue
