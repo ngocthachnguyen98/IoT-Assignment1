@@ -11,8 +11,7 @@ blue = (0, 0, 255)
 
 
 # Get temperature from Sense Hat
-temp = sense.get_temperature()
-temp = round(temp, 1) # Round up to one decimal point
+
 
 
 try:
@@ -30,6 +29,8 @@ try:
 
         # Display message on Sense Hat
         while True:
+            temp = round(sense.get_temperature(), 1) # Round up to one decimal point
+
             if temp <= cold_max: background = blue
 
             elif comfortable_min < temp < comfortable_max: background = green
