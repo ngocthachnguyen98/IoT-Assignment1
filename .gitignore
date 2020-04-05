@@ -343,6 +343,11 @@ healthchecksdb
 # VSCode workspace settings
 .vscode
 
+# VSCode project state file
+.sln
+
 # Testing files
 test.py
 test1.py
+
+.pyproj

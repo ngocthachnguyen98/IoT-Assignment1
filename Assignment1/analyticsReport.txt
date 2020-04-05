@@ -1,16 +1,28 @@
+ANALYTICS REPORT
+
 Task A
+	animatedEmoji.py
+	- At the start, I declare the RGB value of the color red, green, blue and black
+	- For each emoji, I declare a varible with a matrix design and specific color
+	- The 3 emoji rotation will be put in a while true loop with a delay of 3 seconds by using the sleep function
 
 Task B
+	monitorAndDisplay.py
+	- At the start, I declare the RGB value of the color red, green and blue for each specific temperature range
+	- For the temperature ranges, I chose to import the json modules to load the values from the config.json file to the local variables
+	- To refresh the display every 10 seconds with the updated read temperature from the Sense Hat, I decided to put it in the while true loop
+	- In the loop, temperature will be read from the beginning. Then it is run through a collection of conditions (if / elif) to determine which range the current temperature is in and which color to display
+	- A sleep function of 10 seconds will be put at the end of the loop (10 seconds refresh)
 
 Task C
 	electronicDie.py
-	-Although unnecessary for its use in the game, I chose to let the caller of the constructor choose how many sides the die would have as it allows the code to be reused easily.
-	-Seeding the random method with the current time allows for unpredicable rolls
-	-I had the choice to either combine all the method or to make them seperate. I chose seperate as it allowed for a more flexible use of the Die class.
-	-I also chose to display the die roll as an image on the sense hat for any roll less than 7 rather than just displaying a number. These images are hardcoded arrays as they dont really need to ever be changed.
+	- Although unnecessary for its use in the game, I chose to let the caller of the constructor choose how many sides the die would have as it allows the code to be reused easily
+	- Seeding the random method with the current time allows for unpredicable rolls
+	- I had the choice to either combine all the method or to make them seperate. I chose seperate as it allowed for a more flexible use of the Die class
+	- I also chose to display the die roll as an image on the sense hat for any roll less than 7 rather than just displaying a number. These images are hardcoded arrays as they dont really need to ever be changed
 
 	game.py
-	-The players are stored in an array rather than just a two Player variables to allow the number of players to more easily be changed
-	-I had a ScoreBoard and Player class to easily manage the information and methods associated with those two components in the game
-	-I included output both on the sense hat and in the terminal so the players can choose where to look for game information.
-	-For the ScoreBoard I hardcoded a template array so I could use that and not have to set each pixel every time I wanted to show the scoreboard
+	- The players are stored in an array rather than just a two Player variables to allow the number of players to more easily be changed
+	- I had a ScoreBoard and Player class to easily manage the information and methods associated with those two components in the game
+	- I included output both on the sense hat and in the terminal so the players can choose where to look for game information
+	- For the ScoreBoard I hardcoded a template array so I could use that and not have to set each pixel every time I wanted to show the scoreboard

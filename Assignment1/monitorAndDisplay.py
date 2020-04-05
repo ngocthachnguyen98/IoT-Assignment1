@@ -10,10 +10,6 @@ green = (0, 255, 0)
 blue = (0, 0, 255)
 
 
-# Get temperature from Sense Hat
-
-
-
 try:
     # Read and declare variables from config.json file
     with open("config.json", "r") as read_file:
