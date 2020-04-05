@@ -1,0 +1,16 @@
+Task A
+
+Task B
+
+Task C
+	electronicDie.py
+	-Although unnecessary for its use in the game, I chose to let the caller of the constructor choose how many sides the die would have as it allows the code to be reused easily.
+	-Seeding the random method with the current time allows for unpredicable rolls
+	-I had the choice to either combine all the method or to make them seperate. I chose seperate as it allowed for a more flexible use of the Die class.
+	-I also chose to display the die roll as an image on the sense hat for any roll less than 7 rather than just displaying a number. These images are hardcoded arrays as they dont really need to ever be changed.
+
+	game.py
+	-The players are stored in an array rather than just a two Player variables to allow the number of players to more easily be changed
+	-I had a ScoreBoard and Player class to easily manage the information and methods associated with those two components in the game
+	-I included output both on the sense hat and in the terminal so the players can choose where to look for game information.
+	-For the ScoreBoard I hardcoded a template array so I could use that and not have to set each pixel every time I wanted to show the scoreboard

@@ -339,3 +339,10 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /Upload.bat
+
+# VSCode workspace settings
+.vscode
+
+# Testing files
+test.py
+test1.py

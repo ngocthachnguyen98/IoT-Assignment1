@@ -2,9 +2,6 @@ import logging
 from sense_hat import SenseHat
 from time import sleep
 
-# Config logging
-logging.basicConfig(level=logging.DEBUG)
-
 # Declaring varibables 
 sense = SenseHat()
 
@@ -13,6 +10,7 @@ green = (0, 255, 0)
 blue = (0, 0, 255)
 black = (0, 0, 0)
 
+# Emoji Matrix
 smiley_face = [
     black, black, black, black, black, black, black, black,
     black, black, red, black, black, red, black, black,
@@ -38,7 +36,7 @@ sad_face = [
 winky_face = [
     black, black, black, black, black, black, black, black,
     black, black, blue, black, black, black, blue, black,
-    black, black, blue, black, black, blue, blue, black,
+    black, black, blue, black, black, blue, blue, blue,
     black, black, black, black, black, black, black, black,
     black, blue, black, black, black, black, blue, black,
     black, black, blue, black, black, blue, black, black,
@@ -50,12 +48,9 @@ winky_face = [
 while True:
     sense.set_pixels(smiley_face)
     sleep(3)
-    logging.debug("Animating Smiley Face")
 
     sense.set_pixels(sad_face)
     sleep(3)
-    logging.debug("Animating Sad Face")
     
     sense.set_pixels(winky_face)
     sleep(3)
-    logging.debug("Animating Winky Face")
