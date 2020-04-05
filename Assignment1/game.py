@@ -58,8 +58,8 @@ class Game:
 				writer = csv.writer(file, delimiter = "\t")
 				writer.writerow([datetime.now(), player.name, player.points])
 				file.close()
-		except FileNotFoundError: # Cacth exception if file is not found
-			print("ERROR: Non-existing config filename")
+		except FileNotFoundError: # Catch exception if file is not found
+			print("ERROR: winner.csv doesn't exist")
 
 
 	def showMessage(self, message):
